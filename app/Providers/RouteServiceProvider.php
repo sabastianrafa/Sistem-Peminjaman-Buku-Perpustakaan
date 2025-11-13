@@ -13,8 +13,6 @@ class User extends Authenticatable
 
     protected $table = 'users';
     protected $primaryKey = 'id_user';
-    public $incrementing = true;
-    protected $keyType = 'int';
 
     protected $fillable = [
         'nama_user',
@@ -25,12 +23,7 @@ class User extends Authenticatable
     ];
 
     protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    protected $casts = [
-        'email_verified_at' => 'datetime',
+        'password'
     ];
 
     public function ktp()
